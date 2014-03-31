@@ -1,0 +1,20 @@
+{
+  "name": "masters-presentation",
+  "version": "0.0.0",
+  "homepage": "http://masters.bazzle.me",
+  "authors": [
+    "Michal Kawalec <michal@bazzle.me>
+  ],
+  "description": "Mathematical Physics MPhys Presentation",
+  "main": "src/presentation.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "img",
+    "template",
+    "build"
+  ]
+}

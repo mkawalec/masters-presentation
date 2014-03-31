@@ -1,0 +1,27 @@
+{
+  "name": "masters-presentation",
+  "version": "0.0.0",
+  "description": "Mathematical Physics MPhys Presentation",
+  "main": "src/presentation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mkawalec/masters-presentation.git"
+  },
+  "author": "Michal Kawalec",
+  "license": "MIT",
+  "homepage": "http://masters.bazzle.me",
+  "private": true,
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "d3": "~3.4.4",
+    "browserify": "~3.24.13",
+    "grunt": "~0.4.4",
+    "nodemon": "1.0.17",
+    "grunt-browserify": "~2.0.1",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
