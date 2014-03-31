@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=1024"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Low-dimensional modelling of turbulent drag-reduction</title>
+    <meta name="author" content="Michał Kawalec" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="static/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<div id="impress">
+
+    <div id="title" class="step" data-x="0" data-y="0">
+        <h2 class="center title">Low-dimensional modelling of turbulent drag-reduction</h2>
+        <p class="center">MPhys Presentation<br /><em>Michał Kawalec</em></p>
+    </div>
+
+    <div id="quote" class="step" data-x="1500" data-y="0" data-transition-duration="500">
+        <p class="center it">When I meet God, I am going to ask him two questions: Why relativity? And why turbulence? I really believe he will have an answer for the first</p>
+    </div>
+
+    <div id="whatis" class="step" data-x="3000" data-y="0">
+        <h2 class="center">So, what is turbulence?</h2>
+        <img src='img/jet.jpg'/ >
+    </div>
+
+    <div id='cigarette' class="step" data-x="4500" data-y="0">
+        <img src='img/coherent.jpg' />
+    </div>
+
+    <div class="step" data-x="6000" data-y="0">
+        <h2>Why is the turbulence important?</h2>
+        <p>Liquid transport is vital for existence of our civilisation. We want to transport as much fluid as possible, but turbulence is in a way:</p>
+        <ul>
+            <li>Increased drag & energy dissipation</li>
+            <li>Higher pipe wear</li>
+            <li>Increasing ship speed is problematic</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="7500" data-y="0">
+        <h2>What do we know about turbulence in a pipe?</h2>
+        <ul>
+            <li>Laminar velocity profile is parabolic and stable</li>
+            <li>It is possible to induce turbulence above Reynolds number, \(Re=ud/v\), around 2000</li>
+            <li>The point at which turbulence is possible to be induced varies from experiment to experiment</li>
+            <li>State-space dynamics is governed by a chaotic saddle</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="9000" data-y="0">
+        <h2>Chaotic saddle?</h2>
+        <ul>
+            <li>Once turbulent, the chance of motion becoming laminar is constant in time</li>
+            <li>For <strong>every</strong> Reynolds number the turbulence will eventually decay</li>
+            <li>Not commonly observed in real life, as the decay times increase as \(b_0\exp(b_1\exp(b_2 R))\)</li>
+            <li>Still, is an extremely sensitive test of any new model</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="10500" data-y="0">
+        <h2>Evidence of a chaotic saddle</h2>
+        <ul>
+            <li>Survival probability follows exponential decay</li>
+            <li>Coherent states exist</li>
+        </ul>
+    </div>
+
+    <div id='stationary' class="step" data-x="12000" data-y="0">
+        <img src="img/stationary_states.png"/>
+    </div>
+
+    <div class="step" data-x="13500" data-y="1500" data-rotate="90">
+        <p>We want a simple, fast to compute model that would enable us to analyse the behaviour over many runs and domain sizes.</p>
+    </div>
+
+    <div class="step" data-x="15000" data-y="3000" data-rotate="180">
+        <h2>Problems with current models</h2>
+        <ul>
+            <li>Simulate the whole fluid dynamics, thus require a tremendous amount of computational power</li>
+            <li>Operate close to a Minimal Flow Unit</li>
+            <li>Hard to isolate causes of observed motion</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="17500" data-y="1500" data-rotate="270" data-scale="4">
+        <h2>Our model of fluid turbulence</h2>
+        \[ \begin{split}\frac{\delta u}{\delta t} &= -\frac{\delta^4u}{\delta x^4} - 2\frac{\delta^2u}{\delta x^2} - (1 - \epsilon)u \\&~~~+u\frac{\delta u}{\delta x} + (1 - \epsilon)f(v)u \\
+                \frac{\delta v}{\delta t} &= D\frac{\delta^2 v}{\delta x^2} - v + Ru^2 \\
+                        f(v) &= av + bv^2
+                        \end{split} \]
+    </div>
+
+    <div class="step" data-x="19000" data-y="0">
+        <p class="center">Is it a viable model?</p>
+    </div>
+
+    <div id='samplerun' class="step" data-x="20500" data-y="0">
+        <h2 class='center'>A sample run</h2>
+        <div id='sample-run' class='plot'></div>
+    </div>
+
+    <div id='survprob' class='step' data-x='22000' data-y='0'>
+        <h2 class='center'>Survival probability</h2>
+        <div id='surv-prob' class='plot'></div>
+    </div>
+
+    <div class='step' data-x='23500' data-y='0' data-rotate='90'>
+        <p class='center'>It is a viable model (for <em>pure</em> fluids)!</p>
+    </div>
+
+    <div class='step' data-x='25000' data-y='0'>
+        <h2>Turbulent drag reduction</h2>
+        <p>It turns out that addition of small particles lowers drag substantially. Polymers are most potent in reducing drag, even concentrations as low as 1ppm cause noticeable drag reduction.</p>
+    </div>
+
+    <div class='step' data-x='60000' data-y='0' data-scale="4">
+        <p class='center'>Thank you!</p>
+    </div>
+
+    <div id='end' class='step' data-x='61500' data-y='0'>
+        <p class='center'>Projects essential to success of this thesis</p>
+        <img class='logo' src='img/logos/C++-logo.jpg'/>
+        <img class='logo' src='img/logos/alglib.png'/>
+        <img class='logo' src='img/logos/boost.png'/>
+        <img class='logo' src='img/logos/cmake100.png'/>
+        <img class='logo' src='img/logos/HECToR.jpg'/>
+        <img class='logo' src='img/logos/open-mpi-logo.png'/>
+        <img class='logo' src='img/logos/epcc-logo.png'/>
+        <img class='logo' src='img/logos/fftw-logo-med.gif'/>
+        <img class='logo' src='img/logos/new_archer_logo_small_trans.png'/>
+        <img class='logo' src='img/logos/armadillo_logo.png'/>
+        <img class='logo' src='img/logos/d3js.png'/>
+        <img class='logo' src='img/logos/numpy_logo.png'/>
+        <img class='logo' src='img/logos/gerwinski-gnu-head.png'/>
+        <img class='logo' src='img/logos/matplotlib.png'/>
+        <img class='logo' src='img/logos/python.png'/>
+        <img class='logo' src='img/logos/scipy.png'/>
+        <img class='logo' src='img/logos/underscore.png'/>
+        <img class='logo' src='img/logos/v8.png'/>
+    </div>
+
+
+    <script src="static/impress.js"></script>
+    <script src="bower_components/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="static/bundle.js"></script>
+</div>
+</body>
+
+

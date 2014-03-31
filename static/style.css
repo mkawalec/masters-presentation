@@ -1,0 +1,59 @@
+.h2.title { margin-bottom: 100px;}
+.center { text-align: center;}
+.it {font-style: italic;}
+
+#whatis img {width: 496px; margin-left:187px;}
+#cigarette img {width: 870px;}
+#stationary img {width: 870px;}
+
+.plot { width: 870px; height: 560px;}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis path { display: none;}
+.axis .label { font-style: italic; font-weight: bold;}
+
+.line {
+    fill: none;
+    stroke: #45E6E6;
+    stroke-width: 3px;
+}
+.line.path-0 { stroke: #E64545;}
+
+img.logo {max-width: 200px; max-height: 200px; float:left; margin: 2px;}
+
+.step {
+    position: relative;
+    width: 950px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 40px;
+    line-height: 1.5;
+    transitionDuration: 500;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }

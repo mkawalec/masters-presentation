@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         browserify : {
             dist : {
                 files : {
-                    'template/js/bundle.js' : ['src/*.js']
+                    'static/bundle.js' : ['src/*.js']
                 }
             }
         },

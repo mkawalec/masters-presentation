@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "homepage": "http://masters.bazzle.me",
   "authors": [
-    "Michal Kawalec <michal@bazzle.me>
+    "Michal Kawalec <michal@bazzle.me>"
   ],
   "description": "Mathematical Physics MPhys Presentation",
   "main": "src/presentation.js",

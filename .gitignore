@@ -16,4 +16,6 @@ node_modules
 
 build
 template/js/bundle.js
+bower_components
+static
 .presentation
