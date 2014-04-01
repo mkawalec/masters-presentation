@@ -108,6 +108,7 @@
     <div id='survprob' class='step' data-x='22000' data-y='0'>
         <h2 class='center'>Survival probability</h2>
         <div id='surv-prob' class='plot'></div>
+        <p class='center it'>turquoise - data, red - fit to lowest 10%</p>
     </div>
 
     <div class='step' data-x='23500' data-y='0' data-rotate='90'>
@@ -115,9 +116,52 @@
     </div>
 
     <div class='step' data-x='25000' data-y='0'>
-        <h2>Turbulent drag reduction</h2>
-        <p>It turns out that addition of small particles lowers drag substantially. Polymers are most potent in reducing drag, even concentrations as low as 1ppm cause noticeable drag reduction.</p>
+        <p>We can run our model for different domain sizes and Reynolds numbers. Experiments predict that a double exponential fit to each domain size should be possible</p>
+        <img src='img/double_exp_fit.png'>
     </div>
+
+    <div class='step' data-x='26500' data-y='0'>
+        <h2>Turbulent drag reduction</h2>
+        <p>Addition of small particles lowers drag during turbulence substantially. Polymers are most potent in this effect, even concentrations as low as 1ppm cause noticeable drag reduction.</p>
+    </div>
+
+    <div class='step' data-x='29000' data-y='0' data-scale='2'>
+        <h2>Accommodating for polymers</h2>
+        \[
+    \begin{split}
+        \frac{\delta u}{\delta t} &= -\frac{\delta^4u}{\delta x^4} - 2\frac{\delta^2u}{\delta x^2} - (1 - \epsilon)u + u\frac{\delta u}{\delta x} \\&~~~+ (1 - \epsilon)f(v)u + \frac{\delta \tau}{\delta x}\\
+        \frac{\delta v}{\delta t} &= D\frac{\delta^2 v}{\delta x^2} - v + Ru^2 \\
+        \frac{\delta u}{\delta x} &= \tau + \lambda(\frac{\delta \tau}{\delta t} + u\frac{\delta \tau}{\delta x} - 2\tau\frac{\delta u}{\delta x})
+\end{split}
+        \]
+    </div>
+
+    <div class='step' data-x='32000' data-y='0'>
+        <p class='center'>Fits to \(a_0\exp(a_1t)\) at different elasticities</p>
+        <img src='img/lambdas.png'/>
+    </div>
+
+    <div class='step' data-x='33500' data-y='0'>
+        <p class='center'>Phase space evolution at different elasticities</p>
+        <img src='img/phase.png'/>
+    </div>
+
+    <div class='step' data-x='35000' data-y='0'>
+        <p class='center'>Power plot at different elasticities</p>
+        <img src='img/fourier.png'/>
+    </div>
+
+    <div class='step' data-x='38000' data-y='0' data-scale='0.5' data-rotate='180'>
+        <h2>Program code highlights</h2>
+        <ul>
+            <li>Base written in modern C++, with preprocessing in Python</li>
+            <li>IPC achieved with the help of MPI</li>
+            <li>Exhibits perfect scaling up to 40 000 cores on ARCHER</li>
+            <li>Modular structure enables additional plug-ins to be included after the program is compiled</li>
+            <li>Code includes functionality not used in this thesis</li>
+        </ul>
+    </div>
+
 
     <div class='step' data-x='60000' data-y='0' data-scale="4">
         <p class='center'>Thank you!</p>
@@ -143,6 +187,17 @@
         <img class='logo' src='img/logos/scipy.png'/>
         <img class='logo' src='img/logos/underscore.png'/>
         <img class='logo' src='img/logos/v8.png'/>
+    </div>
+
+    <div id='double-fit' class='step' data-x='70000' data-y='0'>
+        <img src='img/double_exp_fit.png'/>
+        <img class='small' src='img/b1_vs_domain.png'/>
+        <img class='small nomarg' src='img/b2_vs_domain.png'/>
+    </div>
+
+    <div class='step' data-x='71500' data-y='0'>
+        <p class='center'>Second derivative of the fits at different domains</p>
+        <img src='img/scaled_fit.png'/>
     </div>
 
 

@@ -2,9 +2,11 @@
 .center { text-align: center;}
 .it {font-style: italic;}
 
-#whatis img {width: 496px; margin-left:187px;}
-#cigarette img {width: 870px;}
-#stationary img {width: 870px;}
+img {float: left;}
+.step#whatis img {width: 496px; margin-left:187px;}
+.step img {width: 870px;}
+.step img.small {width: 400px; margin-right: 70px;}
+.step img.nomarg {margin-right: 0;}
 
 .plot { width: 870px; height: 560px;}
 
